@@ -20,7 +20,7 @@ export const EditForm = ({editedTask, updateTask, closeEditMode}) => {
     }, [closeEditMode])
 
     return (
-        <div role="dialog" aria-labelledby='editTask' aria-modal="true" onClick={closeEditMode}>
+        <div role="dialog" aria-labelledby='editTask' aria-modal="true" onClick={e.target === e.currentTarget && closeEditMode}>
             <form className="todo" onSubmit={handleFormSubmit}>
                 <div className="wrapper">
                     <input
